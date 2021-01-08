@@ -1,0 +1,5 @@
+{{ appService.getStudent$ | async }}
+
+<div *ngFor="let student of appService.getStudent$ | async">
+  <mainteny-ca-student [student]="student"></mainteny-ca-student>
+</div>

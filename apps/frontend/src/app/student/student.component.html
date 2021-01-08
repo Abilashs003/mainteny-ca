@@ -1,0 +1,9 @@
+{{ student.studentName }}
+<div *ngFor="let course of student.courses">
+  {{ course }}
+</div>
+<button (click)="addCourses(student.courses)">add course</button>
+<div *ngFor="let item of coursesLeft">
+  {{ item }}
+  <button (click)="addCourse(item)">+</button>
+</div>
