@@ -71,7 +71,10 @@
               "apps/frontend/src/favicon.ico",
               "apps/frontend/src/assets"
             ],
-            "styles": ["apps/frontend/src/styles.scss"],
+            "styles": [
+              "node_modules/bulma/css/bulma.css",
+              "apps/frontend/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {

@@ -1,5 +1,19 @@
-{{ appService.getStudent$ | async }}
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand" style="height: 100px">
+    <a class="navbar-item" style="height: auto">
+      <img
+        src="assets/mainteny1.png"
+        alt="Bulma: Free, open source, and modern CSS framework based on Flexbox"
+        width="112"
+        style="height: max-content"
+      />
+    </a>
+  </div>
+</nav>
 
 <div *ngFor="let student of appService.getStudent$ | async">
-  <mainteny-ca-student [student]="student"></mainteny-ca-student>
+  <mainteny-ca-student
+    style="margin: 2px"
+    [student]="student"
+  ></mainteny-ca-student>
 </div>

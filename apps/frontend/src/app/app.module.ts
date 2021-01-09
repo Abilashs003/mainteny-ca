@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { StudentComponent } from './student/student.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [AppComponent, StudentComponent],
@@ -12,6 +13,7 @@ import { StudentComponent } from './student/student.component';
     BrowserModule,
     RouterModule.forRoot([], { initialNavigation: 'enabled' }),
     HttpClientModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

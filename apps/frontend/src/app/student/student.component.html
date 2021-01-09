@@ -1,9 +1,41 @@
-{{ student.studentName }}
-<div *ngFor="let course of student.courses">
-  {{ course }}
-</div>
-<button (click)="addCourses(student.courses)">add course</button>
-<div *ngFor="let item of coursesLeft">
-  {{ item }}
-  <button (click)="addCourse(item)">+</button>
+<div class="card">
+  <header class="card-header">
+    <p class="card-header-title">{{ student.studentName }}</p>
+    <a href="#" class="card-header-icon" aria-label="more options">
+      <span class="icon">
+        <i class="fas fa-angle-down" aria-hidden="true"></i>
+      </span>
+    </a>
+  </header>
+  <div class="card-content">
+    <div class="content">
+      <h6 class="card-header-subtitle">Courses Assigned :</h6>
+      <div *ngFor="let course of student.courses">
+        {{ course }}
+      </div>
+    </div>
+    <ng-template #courseLeft [ngIf]="courseLeftVisibility">
+      <div class="content">
+        <h6 class="card-header-subtitle">Courses Unassigned :</h6>
+        <ng-container *ngFor="let item of coursesLeft; let i = index">
+          <div class="columns is-mobile is-centered">
+            <div class="column is-half">
+              {{ item }}
+            </div>
+            <div class="column">
+              <button class="button is-primary" (click)="addCourse(item, i)">
+                +
+              </button>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </ng-template>
+  </div>
+
+  <footer class="card-footer">
+    <a class="card-footer-item" (click)="showCourses(student.courses)">{{
+      addCourseLabel
+    }}</a>
+  </footer>
 </div>
