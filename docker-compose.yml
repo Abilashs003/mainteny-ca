@@ -1,0 +1,10 @@
+version: "3"
+services:
+  maintenycaapi:
+    image: maintenycaapi
+    ports:
+      - 3333:3333
+  maintenyApp:
+    image: maintenycaapp
+    ports:
+      - 4001:80
