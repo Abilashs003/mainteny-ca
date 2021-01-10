@@ -12,7 +12,7 @@ export class AppController {
   }
 
   @Put()
-  upadateData(@Body() student: Students) {
+  updateData(@Body() student: Students) {
     return this.appService.update(student);
   }
 }

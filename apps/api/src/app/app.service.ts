@@ -44,6 +44,7 @@ export class AppService {
   }
 
   update(student: Students) {
+    console.log(student);
     const index = this.studentsList.findIndex(
       (s: Students) => s.studentId === student.studentId
     );
@@ -56,6 +57,7 @@ export class AppService {
         ...this.studentsList.slice(index + 1),
       ];
     }
+    console.log(this.studentsList[0].courses.length);
     return this.studentsList;
   }
 
